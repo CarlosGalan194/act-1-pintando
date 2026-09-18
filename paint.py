@@ -57,17 +57,9 @@ def rectangle(start, end):
     end_fill()
 
 def triangle(start, end):
-    "Draw triangle from start to end."
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
+    """Draw triangle from start to end."""
+    
 
-    goto(end.x, start.y)
-    goto(end.x, end.y)
-    goto(start.x, start.y)
-
-    end_fill()
 
 def tap(x, y):
     """Store starting point or draw shape."""
@@ -103,4 +95,3 @@ onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
-
